@@ -15,6 +15,8 @@ class UserPermissionsController < ApplicationController
   end
 
   def edit
+    @user = User.find(@user_permission.user_id)
+    @permissions = Permission.all
   end
 
   def create
